@@ -111,6 +111,7 @@ class NavAnimation {
 
             for (let i = length - 1; i >= 0; --i) {
                 $(this.items[i]).removeClass('open');
+                let span = $(this.items[i]).find('span');
                 if (i === length - 1) {
                     $(this.items[i]).show()
                 }
@@ -122,7 +123,7 @@ class NavAnimation {
                     top: this.items[i].initialTop,
                     right: this.items[i].initialRight
                 });
-
+                TweenLite.to(span, .6, {opacity: 0})
             }
             TweenLite.to(this.fade, 0.1, {
                 delay: 0.8,
