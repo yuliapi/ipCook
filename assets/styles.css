@@ -25,7 +25,148 @@ body {
     overflow: scroll;
     overflow-x: hidden;
 }
+a {
+    text-decoration: none;
+}
+/*navigation styles*/
+/*.navigation.expanded {*/
+    /*opacity: 1;*/
+    /*z-index: 1000;*/
+    /*background-color: rgba(0,0,0,0.8);*/
+    /*width: 100%;*/
+    /*height: 1000px;*/
+    /*position: fixed;*/
+    /*bottom: 0;*/
+/*}*/
+.navigation {
+    position: relative;
+}
 
+.nav-holder {
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-holder .menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 80px;
+    width: 80px;
+    z-index: 6;
+}
+
+.nav-holder .menu::before {
+    content: "menu";
+    position: absolute;
+    right: 0;
+    top: 8px;
+    font-size: 1.4em;
+    background: rgba(1,1,1,0.64);
+    padding: 2px 6px;
+    color: #f9f9f9;
+
+}
+.navigation-fade {
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    position: fixed;
+    z-index: 1
+}
+.nav-trace {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -48px;
+    left: 8px;
+    border: none;
+    z-index: 100;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-trace.expanded {
+    border-radius: 50%;
+    border-bottom: 2px dashed #f9f9f9;
+    border-left: 2px dashed #f9f9f9;
+    background-color: rgba(167, 166, 166, 0.24);
+}
+
+.nav-holder a  {
+    border-radius: 50%;
+}
+.circle span {
+    font-family: "sans-serif";
+    text-align: center;
+    display: block;
+    top: 60px;
+    position: relative;
+    font-size: 2em;
+    opacity: 0;
+    color: white;
+}
+.all {
+    width: 60px;
+    height: 60px;
+    background-color: rgb(12, 45, 156);
+    position: fixed;
+    right: -20px;
+    top: -20px;
+    z-index: 5
+}
+/*.all span {*/
+    /*font-family: "sans-serif";*/
+    /*text-align: center;*/
+    /*display: block;*/
+    /*top: 60px;*/
+    /*position: relative;*/
+    /*font-size: 2em;*/
+    /*opacity: 0;*/
+    /*color: white;*/
+    /*z-index: 1000*/
+/*}*/
+
+.appetizers {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(242, 120, 183);
+    position: fixed;
+    right: -30px;
+    top: -30px;
+    z-index: 4;
+}
+
+.main {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 190, 17);
+    position: fixed;
+    right: -40px;
+    top: -40px;
+    z-index: 3;
+}
+.desserts {
+    width: 120px;
+    height: 120px;
+    background-color: rgb(16, 198, 202);
+    position: fixed;
+    right: -50px;
+    top: -50px;
+    z-index: 2;
+}
+.add-new {
+    width: 140px;
+    height: 140px;
+    background-color: rgb(91, 38, 105);
+    position: fixed;
+    right: -60px;
+    top: -60px;
+    z-index:1;
+}
 /*thumnail gallry styling*/
 
 .thumbnail {
@@ -43,19 +184,16 @@ body {
     vertical-align: top;
     min-height: 250px;
     cursor: pointer;
-
 }
 
 .thumbnail img {
     width: 200px;
     height: 200px;
-
 }
 
 .thumbnail-wrapper {
     box-sizing: border-box;
     position: relative;
-
 }
 
 .thumbnail li.parent {
@@ -94,7 +232,7 @@ height: initial;
     font-weight: 400;
     margin: 10px;
 }
-
+/*preview styles*/
 .preview {
     position: absolute;
     background: #ddd;

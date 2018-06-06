@@ -6,6 +6,9 @@ date:   2018-05-22 11:10:00
 src: /assets/images/rye-muffin.jpg 
 origin: https://www.lenafilatova.com/2015/04/pashalnyiy-kulich-na-rzhanoy-muce/
 
+category: desserts
+tags: [sugar free]
+
 ingredients: 
     - dried fruits: 1 cup
     - rye flour: 2 cups

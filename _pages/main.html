@@ -1,0 +1,16 @@
+---
+layout: default
+output: true
+permalink: /main/:path/
+title: main
+navigation_weight: 3
+---
+<h1>{{page.title}}</h1>
+<ul id="grid-gallery" class="thumbnail">
+
+    {% for post in site.posts %}
+    {% if post.category == page.title %}
+    {% include category-page.html%}
+    {%endif%}
+    {% endfor %}
+</ul>

@@ -6,6 +6,9 @@ date:   2018-05-22 15:37:00
 src: /assets/images/flax-meat-pie.jpg
 origin: https://www.lenafilatova.com/recipe/pirog-s-myasom-bez-muki/
 
+category: main
+tags: [pie, low gluten, meat]
+
 ingredients: 
     - flax flour: 1/2 cup
     - coconut flour: 2 tbsp

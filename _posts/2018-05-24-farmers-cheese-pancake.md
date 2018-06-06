@@ -6,6 +6,9 @@ date:   2018-05-24 21:41:00
 src: /assets/images/cheese-pancake.jpg
 origin: 
 
+category: desserts
+tags: [gluten free, sugar free, low carbs, no baking]
+
 ingredients: 
     - farmers cheese: 400 g
     - coconut flour: 4 tbsp

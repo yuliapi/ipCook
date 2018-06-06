@@ -1,0 +1,24 @@
+
+    {% if post.src == nil %}
+    {% assign image_src = '/assets/images/no-image.png'%}
+    {% else %}
+    {% assign image_src = post.src %}
+    {% endif %}
+    <li data-title='{{ post.title }}' data-src="{{ post.src | prepend: relative_url}}"
+        data-content='{"ingredients": {{ post.ingredients | jsonify }} }'
+        {% if post.origin and post.origin !="" %}
+        data-origin="{{ post.origin }}"
+        {% endif %}
+    >
+        <div class="thumbnail-wrapper">
+            <a href="{{ site.baseurl }}{{ post.url }}" class="thumbnail-link" onclick="event.preventDefault()">
+
+                <div><h3>{{post.title}}</h3></div>
+                <img src="{{ image_src | prepend: relative_url }}" alt="{{ post.title }}"/>
+            </a>
+        </div>
+    </li>
+
+
+
+
