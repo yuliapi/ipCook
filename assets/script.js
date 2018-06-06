@@ -4,26 +4,19 @@ let preview;
 const standartHeight = 500;
 const imgDefault = '/assets/images/no-image.png';
 
-window.onresize = function () {
-    getWinSize();
-};
 window.onload = function () {
     console.log('scripts loaded');
+    //init navigation animation
+
+    $('#nav-toggler').bind(new NavAnimation().activate());
+    //init preview
 
     items = $('#grid-gallery').find('li');
 
-    getWinSize();
-
     initEvents();
-
     preview = new Preview();
 
 };
-
-function getWinSize() {
-    winsize.width = window.innerWidth;
-    winsize.height = window.innerHeight;
-}
 
 function initEvents() {
     items.each(function () {
@@ -43,7 +36,7 @@ function isSameRow(element) {
 
 function thumbnailClickEvent() {
     let element = $(this);
-    let $element = $(element[0])
+    let $element = $(element[0]);
     //***Close  if clicked element is on preview
     if ($element.hasClass('expanded')) {
         preview.close();
@@ -53,7 +46,10 @@ function thumbnailClickEvent() {
         let recipe = $element.data('content');
         recipe.title = $element.data('title');
         recipe.image = $element.data('src') !== '' ? $element.data('src') : imgDefault;
-        recipe.origin = $element.data('origin') !== '' ? $element.data('origin') : null;
+        if ($element.data('origin') ) {
+            recipe.origin = $element.data('origin')
+        }
+
         let sameRow = isSameRow($element);
 
         if (element.position)
@@ -144,7 +140,7 @@ class Preview extends PreviewMockup {
         this.image = $('<img>', {src: recipe.image});
         this.imageDiv.append(this.image);
         this.imageDiv.append(this.btnHolder);
-        if (recipe.origin !== null) {
+        if (recipe.origin) {
             $(this.linkBtn).attr('href', recipe.origin);
             this.btnHolder.append(this.linkBtn)
         }

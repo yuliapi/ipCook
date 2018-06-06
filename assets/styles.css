@@ -25,6 +25,19 @@ body {
     overflow: scroll;
     overflow-x: hidden;
 }
+header {
+    background-color: #f9f9f9;;
+    width: calc(100% - 100px);
+   overflow: overlay;
+    position: fixed;
+    top:0;
+    z-index: 1000;
+}
+main {
+    padding-top: 100px;
+    position: relative;
+    top: 100px;
+}
 a {
     text-decoration: none;
 }
@@ -109,6 +122,9 @@ a {
     opacity: 0;
     color: white;
 }
+.circle span::first-letter {
+    text-transform: uppercase;
+}
 .all {
     width: 60px;
     height: 60px;
@@ -167,6 +183,65 @@ a {
     top: -60px;
     z-index:1;
 }
+/*Tag styling*/
+.tag{
+    float:left;
+    margin: 7px 20px;
+    position: relative;
+    font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+
+    color: rgb(91, 38, 105);
+
+    padding: 5px;
+    padding-left: 20px;
+    border: 2px solid rgb(91, 38, 105);
+    border-left: none;
+    border-radius: 5%;
+}
+.tag::before {
+    content:'';
+
+    width: 21px;
+    height: 21px;
+
+    position:absolute;
+    left: -10px;
+    top: 3px;
+
+    /*-webkit-transform:rotate(45deg);*/
+    /*-moz-transform:rotate(45deg);*/
+    /*-o-transform:rotate(45deg);*/
+    transform:rotate(45deg);
+
+    border-left: 2px solid rgb(91, 38, 105);
+    border-bottom: 2px solid rgb(91, 38, 105);
+
+    /*-webkit-border-radius:0 0 0 0.25em;*/
+    /*-moz-border-radius:0 0 0 0.25em;*/
+    border-radius: 17%;
+
+}
+.tag::after {
+    content:'';
+
+    width: 8px;
+    height: 8px;
+
+    background: #fff;
+
+    /*-webkit-border-radius:4.167em;*/
+    /*-moz-border-radius:4.167em;*/
+    border-radius: 50%;
+
+    border: 2px solid rgb(91, 38, 105);
+    position: absolute;
+    top: 9px;
+    left: 0;
+}
+
 /*thumnail gallry styling*/
 
 .thumbnail {
