@@ -3,7 +3,7 @@ let items;
 let preview;
 const standartHeight = 500;
 const imgDefault = '/assets/images/no-image.png';
-
+let allTags;
 window.onload = function () {
     console.log('scripts loaded');
     //init navigation animation
@@ -15,6 +15,8 @@ window.onload = function () {
 
     initEvents();
     preview = new Preview();
+
+    allTags = $('.tag')
 
 };
 
@@ -49,7 +51,10 @@ function thumbnailClickEvent() {
         if ($element.data('origin') ) {
             recipe.origin = $element.data('origin')
         }
-
+        if ($element.data('link') ) {
+            recipe.link = $element.data('link');
+            console.log(recipe)
+        }
         let sameRow = isSameRow($element);
 
         if (element.position)
@@ -91,16 +96,16 @@ class PreviewMockup {
         this.btnHolder = $('<div>', {class: 'preview-btn-holder'});
         this.showBtn = $('<a>', {text: 'my recipie', target: '_blank'});
         this.linkBtn = $('<a>', {text: 'original recipie', target: '_blank'});
-        this.btnHolder.append(this.showBtn);
+
 
     }
 }
 
 class Table {
     constructor() {
-        this.table = $('<table>');
-        this.head = $('<th>');
-        this.headRow = $('<tr>').append($('<td>', {text: "Ingredients:"}));
+        this.table = $('<table>', {class: 'ingredient-table'});
+        this.head = $('<tr>');
+        this.headRow = $('<th>', {text: "ingredients"});
         this.head.append(this.headRow);
         this.table.append(this.head);
     }
@@ -140,6 +145,11 @@ class Preview extends PreviewMockup {
         this.image = $('<img>', {src: recipe.image});
         this.imageDiv.append(this.image);
         this.imageDiv.append(this.btnHolder);
+        if (recipe.link) {
+            $(this.showBtn).attr('href', recipe.link);
+
+        }
+        this.btnHolder.append(this.showBtn);
         if (recipe.origin) {
             $(this.linkBtn).attr('href', recipe.origin);
             this.btnHolder.append(this.linkBtn)
@@ -190,4 +200,14 @@ class Preview extends PreviewMockup {
         window.scrollTo(0, this.scroll)
     }
 
+}
+/****************************************************************/
+function makeActive(tag) {
+    for (let i = 0; i<allTags.length; i++) {
+        let t = $(allTags[i])
+        if (t.hasClass('active')) {
+            t.removeClass('active')
+        }
+    }
+    $(tag).addClass('active')
 }

@@ -9,6 +9,9 @@
         {% if post.origin and post.origin !="" %}
         data-origin="{{ post.origin }}"
         {% endif %}
+        {% if post.permalink and post.permalink !="" %}
+        data-link="{{ post.permalink }}"
+        {% endif %}
     >
         <div class="thumbnail-wrapper">
             <a href="{{ site.baseurl }}{{ post.url }}" class="thumbnail-link" onclick="event.preventDefault()">

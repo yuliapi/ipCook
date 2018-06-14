@@ -6,58 +6,9 @@ title: all
 navigation_weight: 1
 ---
 
-<h1>Index page.....</h1>
-<h1>{{page.title}}</h1>
 <ul id="grid-gallery" class="thumbnail">
-
     {% for post in site.posts %}
-
-    {% include category-page.html%}
-
+    {% include thumbnails.html%}
     {% endfor %}
 </ul>
-<!--<ul id="grid-gallery" class="thumbnail">-->
-    <!--{% for post in site.posts %}-->
-    <!--{% if post.src == nil %}-->
-    <!--{% assign image_src = '/assets/images/no-image.png'%}-->
-    <!--{% else %}-->
-    <!--{% assign image_src = post.src  %}-->
-    <!--{% endif %}-->
-
-
-    <!--<li data-title='{{ post.title }}' data-src="{{ post.src | prepend: relative_url}}"-->
-        <!--data-content='{"ingredients": {{ post.ingredients | jsonify }} }'-->
-        <!--{% if post.origin and post.origin != "" %}-->
-        <!--data-origin="{{ post.origin }}"-->
-        <!--{% endif %}-->
-    <!--&gt;-->
-        <!--<div class="thumbnail-wrapper">-->
-            <!--<a href="{{ site.baseurl }}{{ post.url }}" class="thumbnail-link" onclick="event.preventDefault()">-->
-
-                <!--<div><h3>{{post.title}}</h3></div>-->
-                <!--<img src="{{ image_src | prepend: relative_url }}" alt="{{ post.title }}"/>-->
-
-            <!--</a>-->
-
-        <!--</div>-->
-
-    <!--</li>-->
-    <!--{% endfor %}-->
-
-<!--</ul>-->
-
-<!--{% for category in site.categories %}-->
-<!--<div class="archive-group">-->
-    <!--{% capture category_name %}{{ category | first }}{% endcapture %}-->
-    <!--<div id="#{{ category_name | slugize }}"></div>-->
-    <!--<p></p>-->
-
-    <!--<h3 class="category-head">{{ category_name }}</h3>-->
-    <!--<a name="{{ category_name | slugize }}"></a>-->
-    <!--{% for post in site.categories[category_name] %}-->
-    <!--<article class="archive-item">-->
-        <!--<h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>-->
-    <!--</article>-->
-    <!--{% endfor %}-->
-<!--</div>-->
-<!--{% endfor %}-->
+<

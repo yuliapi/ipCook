@@ -1,7 +1,7 @@
 ---
 layout: default
 output: true
-permalink: /desserts/:path/
+permalink: /desserts/
 title: desserts
 navigation_weight: 4
 ---
@@ -10,7 +10,7 @@ navigation_weight: 4
 
 {% for post in site.posts %}
 {% if post.category == page.title %}
-{% include category-page.html%}
+    {% include thumbnails.html%}
 {%endif%}
 {% endfor %}
 </ul>

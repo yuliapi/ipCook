@@ -9,23 +9,10 @@ http://www.garethspictures.com/ -->
             {% for p in navigation_pages %}
             {% if p.navigation_weight %}
             <a class="{{ p.title }} circle menu-item" href="{{ p.url }}"><span>{{ p.title }}</span></a>
-            <!--<li>-->
-                <!--<a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>-->
-                    <!--{{ p.title }}-->
-                <!--</a>-->
-            <!--</li>-->
+
             {% endif %}
             {% endfor %}
-                <!--<a class="all circle menu-item"><span>all</span></a>-->
 
-
-                <!--<a class="appetizers circle menu-item" href="/appetizers.html"><span>appetizers</span></a>-->
-
-
-                <!--<a class="main circle menu-item"><span>main</span></a>-->
-
-
-                <!--<a class="desserts circle menu-item"><span>desserts</span></a>-->
 
                 <a class="add-new circle menu-item" aria-disabled="true"></a>
 
