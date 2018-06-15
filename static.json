@@ -1,4 +1,4 @@
 {
-  "root": "public",
+  "root": "_site",
   "clean_urls": false
 }
