@@ -69,6 +69,11 @@ header {
 a {
   text-decoration: none;
 }
+h1, h2, h3, th {
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
 
 .navigation {
   position: relative;
@@ -127,54 +132,79 @@ a {
   background-color: rgba(167, 166, 166, 0.24);
 }
 
-.nav-holder a {
+.circle {
   border-radius: 50%;
 }
-
-.circle span {
-  font-family: "sans-serif";
-  text-align: center;
-  display: block;
-  top: 60px;
-  position: relative;
-  font-size: 2em;
-  opacity: 0;
-  color: white;
-}
-
-.circle span::first-letter {
-  text-transform: uppercase;
-}
-
-@mixin nav-styles($size, $position, $color, $z) {
+@mixin circle-position ($position, $z) {
   position: fixed;
   right: $position * 1px;
   top: $position * 1px;
+  z-index: $z
+}
+@mixin circle-size-color ($size, $color) {
   width: $size * 1px;
   height: $size * 1px;
   background-color: $color;
-  z-index: $z
 }
+.navigation {
+  .circle span {
+    font-family: "sans-serif";
+    text-align: center;
+    display: block;
+    top: 60px;
+    position: relative;
+    font-size: 2em;
+    opacity: 0;
+    color: white;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+  .all {
+    @include circle-position(-20, 250);
+    @include circle-size-color (60, $blue);
+  }
 
-.all {
-  @include nav-styles(60, -20, $blue, 250);
-}
+  .appetizers {
+    @include circle-position(-30, 240);
+    @include circle-size-color (80, $pink);
+  }
 
-.appetizers {
-  @include nav-styles(80, -30, $pink, 240);
-}
+  .main {
+    @include circle-position( -40, 230);
+    @include circle-size-color (100, $yellow);
+  }
 
-.main {
-  @include nav-styles(100, -40, $yellow, 230);
-}
+  .desserts {
+    @include circle-position(-50, 220);
+    @include circle-size-color (120, $light-blue);
+  }
 
-.desserts {
-  @include nav-styles(120, -50, $light-blue, 220);
+  .add-new {
+    @include circle-position( -60, 210);
+    @include circle-size-color(140, $violet);
+  }
 }
+//$breadcrumb-size: 60;
+//.breadcrumbs {
+//  width: 100%;
+//  height: 90px;
+//  border: 1px solid black;
+//  .circle {
+//    display: inline-block;
+//    margin: 10px;
+//    &.all {
+//      @include circle-size-color ($breadcrumb-size, $blue);
+//    }
+//    &.desserts {
+//      @include circle-size-color ($breadcrumb-size, $light-blue);
+//    }
+//    span {
+//      color: black;
+//    }
+//  }
+//}
 
-.add-new {
-  @include nav-styles(140, -60, $violet, 210);
-}
 
 /*Tag styling*/
 //.tag {
@@ -419,9 +449,6 @@ a {
       width: 30%;
     }
   }
-  th::first-letter {
-    text-transform: uppercase;
-  }
   th::after {
     content: ':'
   }
@@ -433,6 +460,9 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include media-query(small) {
+    align-items: flex-end;
+  }
   a {
     display: inline-block;
     font-weight: $font-bold;
@@ -465,19 +495,25 @@ a {
     color: $category
   }
 }
+@mixin border-style($category) {
+  border: 2px solid $category;
+}
 .recipe-card {
   width: 75%;
   border: 2px solid rgb(16, 198, 202);
   margin: 20px auto;
   position: relative;
   &.category-desserts {
-    @include category-colors($desserts)
+    @include category-colors($desserts);
+    @include border-style($desserts)
   }
   &.category-main {
-    @include category-colors($main)
+    @include category-colors($main);
+    @include border-style($main)
   }
   &.category-appetizers {
-    @include category-colors($appetizers)
+    @include category-colors($appetizers);
+    @include border-style($appetizers)
   }
   @include media-query(large) {
     min-height: calc(100vh - 40px);
@@ -488,10 +524,6 @@ a {
 .recipe-card h3 {
   letter-spacing: 1.3px;
   font-size: 20px;
-}
-
-.recipe-card h3::first-letter {
-  text-transform: uppercase;
 }
 
 .recipe-card .span-wrapper {
@@ -555,9 +587,6 @@ a {
     border: 1px solid $violet;
     &::after {
       content: ':'
-    }
-    &::first-letter {
-      text-transform: uppercase;
     }
   }
   @include media-query(large) {

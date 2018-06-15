@@ -1,11 +1,11 @@
 class NavAnimation {
-    constructor() {
+    constructor(parent) {
         this.expanded = false;
         this.stretched = false;
 
         this.nav = $('#nav-toggler');
         this.fade = $('#nav-fade');
-        this.items = $('.menu-item');
+        this.items = $(parent).find('.menu-item');
         for (let i = 0; i < this.items.length; i++) {
             this.items[i].initialWidth = this.items[i].offsetWidth;
             this.items[i].initialHeight = this.items[i].offsetHeight;
@@ -15,7 +15,6 @@ class NavAnimation {
     }
 
     activate() {
-
         console.log("navigation is active");
 
         this.nav.bind('mouseenter mouseout', () => {
@@ -46,13 +45,11 @@ class NavAnimation {
     }
 
     pulse() {
-
         for (let i = 0; i < this.items.length; i++) {
             $(this.items[i]).bind('mouseenter', () => {
                 TweenMax.to(this.items[i], 1.2, {scale: 1.2, repeat: -1, yoyo: true});
             });
             $(this.items[i]).bind('mouseout', () => {
-
                 TweenMax.to(this.items[i], 1, {scale: 1, repeat: 0, yoyo: false});
 
             })

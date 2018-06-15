@@ -8,7 +8,8 @@ window.onload = function () {
     console.log('scripts loaded');
     //init navigation animation
 
-    $('#nav-toggler').bind(new NavAnimation().activate());
+    $('#nav-toggler').bind(new NavAnimation("#nav-menu").activate());
+    // $('#breadcrumbs').bind(new NavAnimation("#breadcrumbs").pulse());
     //init preview
 
     items = $('#grid-gallery').find('li');

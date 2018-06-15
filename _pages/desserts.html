@@ -5,12 +5,15 @@ permalink: /desserts/
 title: desserts
 navigation_weight: 4
 ---
-<h1>{{page.title}}</h1>
+<!--<div class="breadcrumbs" id="breadcrumbs">-->
+    <!--<a class="circle all menu-item" href="#")"><span>All</span></a>-->
+    <!--<a class="circle {{page.title}} menu-item" href="{{ page.url }}"><span>{{ page.title }}</span></a>-->
+<!--</div>-->
 <ul id="grid-gallery" class="thumbnail">
 
-{% for post in site.posts %}
-{% if post.category == page.title %}
+    {% for post in site.posts %}
+    {% if post.category == page.title %}
     {% include thumbnails.html%}
-{%endif%}
-{% endfor %}
+    {%endif%}
+    {% endfor %}
 </ul>

@@ -2,9 +2,9 @@
 http://www.garethspictures.com/ -->
 <nav class="navigation">
     <div class="nav-holder">
-        <div class=menu></div>
+        <div class="menu"></div>
         <div class="nav-trace" id="nav-toggler"></div>
-        <div>
+        <div id="nav-menu">
             {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
             {% for p in navigation_pages %}
             {% if p.navigation_weight %}
@@ -12,11 +12,7 @@ http://www.garethspictures.com/ -->
 
             {% endif %}
             {% endfor %}
-
-
                 <a class="add-new circle menu-item" aria-disabled="true"></a>
-
-
         </div>
 
     </div>

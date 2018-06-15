@@ -1,7 +1,9 @@
 ---
 layout: post
-title:  Farmers cheese pancakes
+title:  farmers cheese pancakes
 date:   2018-05-24 21:41:00
+output: true
+permalink: /farmers-cheese-pancakes
 
 src: /assets/images/cheese-pancake.jpg
 origin: 
@@ -16,7 +18,7 @@ ingredients:
     - raisins: 40 g
     - corn groats (or oat flakes or oat bran) for breading: 
     
-steps:
-    - Mix ingredients
-    - Fry slow with small amount of oil(coconut, olive)
 ---
+1. Mix ingredients
+2. Cover with corn groats
+3. Fry slow with small amount of oil(coconut, olive)
