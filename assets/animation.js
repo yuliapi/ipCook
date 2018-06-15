@@ -85,7 +85,8 @@ class NavAnimation {
                     rightPos = winsize/2 - grow - 20
                 }
                 if (i === length - 1) {
-                    $(this.items[i]).hide()
+                    $(this.items[i]).hide();
+                    rightPos = -1000
                 }
 
                 TweenLite.to(this.items[i], .6, {
