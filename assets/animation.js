@@ -70,16 +70,22 @@ class NavAnimation {
                 let span = $(this.items[i]).find('span');
                 $(this.items[i]).addClass('open');
                 // let grow = isMobile() === false ? 150 : 100;
-                if (i === length - 1) {
-                    $(this.items[i]).hide()
-                }
+
                 const quarter = winsize / 4;
-                let grow = 150;
+                const grow = 150;
                 let rightPos = winsize - (i * quarter + ((quarter / 2) + grow/2));
                 let topPos = 120;
-                if (winsize <= 660) {
-                    topPos = 20 + (i*1.2*grow);
-                    rightPos = winsize/2 - grow/2
+                if (i === 2 || i === 3) {
+                    topPos = topPos + grow + 20
+                }
+                if (i === 0 || i === 2) {
+                    rightPos = winsize/2 + 20
+                }
+                if (i === 1 || i === 3) {
+                    rightPos = winsize/2 - grow - 20
+                }
+                if (i === length - 1) {
+                    $(this.items[i]).hide()
                 }
 
                 TweenLite.to(this.items[i], .6, {
