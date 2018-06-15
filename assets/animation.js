@@ -75,19 +75,22 @@ class NavAnimation {
                 const grow = 150;
                 let rightPos = winsize - (i * quarter + ((quarter / 2) + grow/2));
                 let topPos = 120;
-                if (i === 2 || i === 3) {
-                    topPos = topPos + grow + 20
+                if (winsize <= 635) {
+                    if (i === 2 || i === 3) {
+                        topPos = topPos + grow + 20
+                    }
+                    if (i === 0 || i === 2) {
+                        rightPos = winsize/2 + 20
+                    }
+                    if (i === 1 || i === 3) {
+                        rightPos = winsize/2 - grow - 20
+                    }
+                    if (i === length - 1) {
+                        $(this.items[i]).hide();
+                        rightPos = -1000
+                    }
                 }
-                if (i === 0 || i === 2) {
-                    rightPos = winsize/2 + 20
-                }
-                if (i === 1 || i === 3) {
-                    rightPos = winsize/2 - grow - 20
-                }
-                if (i === length - 1) {
-                    $(this.items[i]).hide();
-                    rightPos = -1000
-                }
+
 
                 TweenLite.to(this.items[i], .6, {
                     delay: (i + 1) * 0.1,
