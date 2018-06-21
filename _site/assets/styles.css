@@ -163,7 +163,8 @@ h1::first-letter, h2::first-letter, h3::first-letter, th::first-letter {
       margin-bottom: 10px; }
   .thumbnail img {
     width: 200px;
-    height: 200px; }
+    height: 200px;
+    background-color: #ddd; }
 
 .thumbnail-wrapper {
   box-sizing: border-box;
@@ -188,7 +189,7 @@ h1::first-letter, h2::first-letter, h3::first-letter, th::first-letter {
   max-width: 200px;
   height: auto; }
   .thumbnail-link div {
-    height: 42px;
+    height: 66px;
     display: flex;
     justify-content: center;
     align-items: center; }

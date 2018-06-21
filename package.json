@@ -1,0 +1,28 @@
+{
+  "name": "ipcook",
+  "version": "1.0.0",
+  "description": "cookin book",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-responsive": "^2.10.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-responsive-config": "^1.1.0"
+  },
+  "scripts": {
+    "test": "gulp",
+    "run": "gulp images && jekyll serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuliapi/ipCook.git"
+  },
+  "author": "Iuliia Pishchulina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuliapi/ipCook/issues"
+  },
+  "homepage": "https://github.com/yuliapi/ipCook#readme"
+}

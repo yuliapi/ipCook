@@ -305,6 +305,7 @@ h1, h2, h3, th {
   img {
     width: 200px;
     height: 200px;
+    background-color: $light-gray;
   }
 }
 
@@ -333,7 +334,7 @@ h1, h2, h3, th {
   max-width: 200px;
   height: auto;
   div {
-    height: 42px;
+    height: 66px;
     display: flex;
     justify-content: center;
     align-items: center;
