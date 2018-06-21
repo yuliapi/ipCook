@@ -49,6 +49,7 @@ function thumbnailClickEvent() {
         let recipe = $element.data('content');
         recipe.title = $element.data('title');
         recipe.image = $element.data('src') !== '' ? $element.data('src') : imgDefault;
+        recipe.image = recipe.image
         if ($element.data('origin') ) {
             recipe.origin = $element.data('origin')
         }

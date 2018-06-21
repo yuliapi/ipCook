@@ -2,11 +2,11 @@
 layout: default
 
 ---
-{% assign category_class = 'category-' | append:  {{page.category }} %}
+{% assign category_class = 'category-' | append:  page.category  %}
 {% if page.src == nil %}
-{% assign image_src = '/assets/images/no-image.png'%}
+{% assign image_src = '/assets/images/256px-No_image_available.png'%}
 {% else %}
-{% assign image_src = page.src %}
+{% assign image_src = post.src  %}
 {% endif %}
 <div class="recipe-card {{category_class}}">
     <div class="card-header-wrapper">
@@ -15,6 +15,7 @@ layout: default
             <h1>{{page.title}}</h1>
         </div>
     </div>
+
 
     <div class="card-body">
         <div class="card-left">
