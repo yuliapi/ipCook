@@ -30,18 +30,20 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-admin
 
 include: ["_pages"]
 permalink: /:title/
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Version number
+build: 20180621
+
+# Exclude the following from the Jekyll build process.
+# Note: "vendor" is for Travis CI.
+exclude: ["vendor",
+          "_assets",
+          "Gemfile",
+          "Gemfile.lock",
+          "gulpfile.js",
+          "node_modules",
+          "package.json"]
