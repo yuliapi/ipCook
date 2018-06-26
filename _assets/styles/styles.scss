@@ -1,5 +1,4 @@
 
-
 $media-queries: (
         large: (breakpoint: '(min-width: 830px)'),
         normal: (breakpoint: '(min-width: 651px)'),
@@ -36,6 +35,9 @@ $desserts: $light-blue;
 $main: $yellow;
 $appetizers: $pink;
 
+$font-base: 16px;
+
+
 html {
   height: 100%;
 }
@@ -52,6 +54,7 @@ html {
 
 body {
   font-family: $font-lato;
+  font-size: $font-base;
   background: $color-base;
   font-weight: $font-light;
   color: #333;
@@ -152,7 +155,7 @@ h1, h2, h3, th {
     display: block;
     top: 60px;
     position: relative;
-    font-size: 2em;
+    font-size: 1.75em;
     opacity: 0;
     color: white;
     &::first-letter {
@@ -416,18 +419,18 @@ h1, h2, h3, th {
   padding: 0 40px 0 20px;
   h3 {
     font-weight: $font-light;
-    font-size: 32px;
-    line-height: 32px;
+    font-size: 2em;
+    line-height: 2em;
     padding: 0 0 10px;
     margin: 0;
     @include media-query(large) {
-      font-size: 52px;
-      line-height: 52px;
+      font-size: 3.25em;
+      line-height: 3.25em;
     }
   };
   h4 {
     font-weight: $font-light;
-    font-size: 36px;
+    font-size: 2.25em;
     margin: 0;
   };
   table {
@@ -440,12 +443,12 @@ h1, h2, h3, th {
   border-spacing: 0;
   td {
     padding: 5px 0;
-    font-size: 18px;
+    font-size: 1.125em;
   }
   th {
     padding: 0;
     letter-spacing: 1.3px;
-    font-size: 20px;
+    font-size: 1.25em;
     font-weight: $font-normal;
     text-align: start;
     .ingredient {
@@ -472,7 +475,7 @@ h1, h2, h3, th {
   a {
     display: inline-block;
     font-weight: $font-bold;
-    font-size: 16px;
+    font-size: 1em;
     color: #333;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -529,7 +532,7 @@ h1, h2, h3, th {
 
 .recipe-card h3 {
   letter-spacing: 1.3px;
-  font-size: 20px;
+  font-size: 1.25em;
 }
 
 .recipe-card .span-wrapper {
@@ -638,7 +641,7 @@ h1, h2, h3, th {
   ol {
     margin-left: 20px;
     font-family: 'Lato', 'Montserrat', sans-serif;;
-    font-size: 16px;
+    font-size: 1em;
     letter-spacing: 1px;
     word-spacing: 1.2px;
     padding: 0;
