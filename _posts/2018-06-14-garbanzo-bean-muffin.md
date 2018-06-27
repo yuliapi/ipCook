@@ -3,7 +3,7 @@ layout: post
 title:  garbanzo bean muffin
 date:   2018-06-14 17:36:00
 output: true
-permalink: /garbanzo-bean-muffin
+permalink: /garbanzo-bean-muffin/
 
 src: 
 origin: 

@@ -3,7 +3,7 @@ layout: post
 title:  farmers cheese pancakes
 date:   2018-05-24 21:41:00
 output: true
-permalink: /farmers-cheese-pancakes
+permalink: /farmers-cheese-pancakes/
 
 src: /assets/images/cheese-pancake.jpg
 origin: 

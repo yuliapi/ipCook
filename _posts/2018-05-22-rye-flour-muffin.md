@@ -3,7 +3,7 @@ layout: post
 title:  rye flour muffin
 date:   2018-05-22 11:10:00
 output: true
-permalink: /rye-flour-muffin
+permalink: /rye-flour-muffin/
 
 src: /assets/images/rye-muffin.jpg 
 origin: https://www.lenafilatova.com/2015/04/pashalnyiy-kulich-na-rzhanoy-muce/
