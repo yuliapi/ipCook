@@ -32,7 +32,6 @@ plugins:
   - jekyll-feed
   - jekyll-admin
 
-
 include: ["_pages", "_posts"]
 permalink: /:categories/:title/
 # Version number
