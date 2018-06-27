@@ -3,7 +3,7 @@ layout: post
 title:  meat pie on flax tart
 date:   2018-05-22 15:37:00
 output: true
-permalink: /meat-pie-on-flax-tart
+permalink: /meat-pie-on-flax-tart/
 
 src: /assets/images/flax-meat-pie.jpg
 origin: https://www.lenafilatova.com/recipe/pirog-s-myasom-bez-muki/

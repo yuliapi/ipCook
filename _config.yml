@@ -32,9 +32,8 @@ plugins:
   - jekyll-feed
   - jekyll-admin
 
-include: ["_pages"]
-permalink: /:title/
-
+include: ["_pages", "_posts"]
+permalink: /:categories/:title/
 # Version number
 build: 20180621
 

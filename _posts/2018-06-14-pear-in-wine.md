@@ -3,7 +3,7 @@ layout: post
 title:  pear in wine
 date:   2018-06-14 17:47:00
 output: true
-permalink: /pear-in-wine
+permalink: /pear-in-wine/
 
 src:  /assets/images/pear-in-wine.jpg
 origin: https://kinda-cook.livejournal.com/tag/%D0%B3%D1%80%D1%83%D1%88%D0%B0

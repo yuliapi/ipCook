@@ -149,9 +149,9 @@ class Preview extends PreviewMockup {
         this.imageDiv.append(this.btnHolder);
         if (recipe.link) {
             $(this.showBtn).attr('href', recipe.link);
-
+            this.btnHolder.append(this.showBtn);
         }
-        this.btnHolder.append(this.showBtn);
+
         if (recipe.origin) {
             $(this.linkBtn).attr('href', recipe.origin);
             this.btnHolder.append(this.linkBtn)
@@ -177,6 +177,8 @@ class Preview extends PreviewMockup {
         console.log('update');
         this.detailsDiv.empty();
         this.imageDiv.empty();
+        $(this.linkBtn).attr('href', '');
+        this.btnHolder.empty();
         this.parent.height('initial')
     }
 
@@ -202,14 +204,4 @@ class Preview extends PreviewMockup {
         window.scrollTo(0, this.scroll)
     }
 
-}
-/****************************************************************/
-function makeActive(tag) {
-    for (let i = 0; i<allTags.length; i++) {
-        let t = $(allTags[i])
-        if (t.hasClass('active')) {
-            t.removeClass('active')
-        }
-    }
-    $(tag).addClass('active')
 }
