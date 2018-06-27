@@ -31,6 +31,7 @@ gulp.task('build:styles', function() {
         trace: true,
         loadPath: [paths.sassFiles]
     })).pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
+        .pipe(concat('styles.css'))
 
         .pipe(cleancss())
         .pipe(gulp.dest(paths.jekyllCssFiles))
