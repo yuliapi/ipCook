@@ -182,32 +182,29 @@ h1, h2, h3, th {
     @include circle-size-color (120, $light-blue);
   }
 
-  .add-new {
+  .fake-circle {
     @include circle-position( -60, 210);
     @include circle-size-color(140, $violet);
   }
 }
-//$breadcrumb-size: 60;
-//.breadcrumbs {
-//  width: 100%;
-//  height: 90px;
-//  border: 1px solid black;
-//  .circle {
-//    display: inline-block;
-//    margin: 10px;
-//    &.all {
-//      @include circle-size-color ($breadcrumb-size, $blue);
-//    }
-//    &.desserts {
-//      @include circle-size-color ($breadcrumb-size, $light-blue);
-//    }
-//    span {
-//      color: black;
-//    }
-//  }
-//}
+.add-new {
+  position: fixed;
+  right: -35px;
+  top: 200px;
+  display: inline-block;
+  @include circle-size-color(100, $violet);
 
-
+  border-radius: 50%;
+  &::after {
+    content: '+';
+    color: $color-base;
+    font-size: 4em;
+    font-weight: 600;
+    position: absolute;
+    top: 11px;
+    left: 25px;
+  }
+}
 /*Tag styling*/
 //.tag {
 //    float: left;
@@ -237,16 +234,9 @@ h1, h2, h3, th {
 //    left: -10px;
 //    top: 3px;
 
-/*-webkit-transform:rotate(45deg);*/
-/*-moz-transform:rotate(45deg);*/
-/*-o-transform:rotate(45deg);*/
 //    transform: rotate(45deg);
-//
 //    border-left: 2px solid rgb(91, 38, 105);
 //    border-bottom: 2px solid rgb(91, 38, 105);
-//
-//    /*-webkit-border-radius:0 0 0 0.25em;*/
-//    /*-moz-border-radius:0 0 0 0.25em;*/
 //    border-radius: 17%;
 //
 //}
@@ -258,9 +248,7 @@ h1, h2, h3, th {
 //    height: 8px;
 //
 //    background: #fff;
-//
-//    /*-webkit-border-radius:4.167em;*/
-//    /*-moz-border-radius:4.167em;*/
+
 //    border-radius: 50%;
 //
 //    border: 2px solid rgb(91, 38, 105);
@@ -348,6 +336,7 @@ h1, h2, h3, th {
   }
 }
 
+
 /*preview styles*/
 .preview {
   position: absolute;
@@ -389,6 +378,12 @@ h1, h2, h3, th {
     top: 50%;
     height: 1px;
     background: $gray;
+
+  }
+  &:hover::before,
+  &:hover::after {
+    background-color: $violet;
+    height: 2px;
   }
   &:before {
     transform: rotate(-45deg);
@@ -420,12 +415,10 @@ h1, h2, h3, th {
   h3 {
     font-weight: $font-light;
     font-size: 2em;
-    //line-height: 2em;
     padding: 0 0 10px;
     margin: 0;
     @include media-query(large) {
       font-size: 3.25em;
-      //line-height: 3.25em;
     }
   };
   h4 {
@@ -436,6 +429,21 @@ h1, h2, h3, th {
   table {
     width: 100%;
     max-width: 500px;
+  }
+  .edit {display: inline-block;
+    color: $gray;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    font-style: italic;
+    letter-spacing: 1.2px;
+    padding-bottom: 10px;
+    margin-top: -10px;
+    cursor: pointer;
+
+    &:hover {
+      color: $violet;
+      font-weight: 400
+    }
   }
 }
 
@@ -480,7 +488,7 @@ h1, h2, h3, th {
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 10px 0;
-    border: 3px solid #333;
+    border: 3px solid $gray;
     text-align: center;
     text-decoration: none;
     margin: 10px 0;
@@ -492,6 +500,10 @@ h1, h2, h3, th {
     outline: none;
     cursor: pointer;
     width: 200px;
+    &:hover {
+      color: $violet;
+      border-color: $violet
+    }
   }
 }
 
@@ -681,3 +693,4 @@ ol > li:before {
 ol > li:nth-child(n+10)::before {
   padding-right: 1.8em;
 }
+

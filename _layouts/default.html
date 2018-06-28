@@ -5,12 +5,11 @@
 <div>
     {% include navigation.html %}
 <main>
-    <!--{%if page.title != 'all' %}-->
-    <!--<div class="breadcrumbs" id="breadcrumbs">-->
-        <!--<a class="circle all menu-item" href="#")"><span>All</span></a>-->
 
-    <!--</div>-->
-    <!--{%endif%}-->
+    {% if site.env == 'local' %}
+    <a class="add-new" href="{{site.url}}/admin/collections/posts/new" target="_blank"></a>
+
+    {% endif %}
     {{ content }}
 </main>
 </div>

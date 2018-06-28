@@ -13,6 +13,10 @@
     <link rel="icon" href="/assets/images/favicon.jpg">
     <!--<link rel="stylesheet" href= "/assets/styles/normalize.css">-->
     <link rel="stylesheet" href= "/assets/styles/styles.css">
+    <script>
+        window.env = "prod";
+        window.adminUrl = "http://localhost:4000"
+    </script>
 
 </head>
 
@@ -23,9 +27,9 @@ http://www.garethspictures.com/ -->
 <nav class="navigation">
     <div class="navigation-fade" id="nav-fade"></div>
 
-    <div class="nav-holder">
+    <div class="nav-holder" >
         <div class="menu"></div>
-        <div class="nav-trace" id="nav-toggler"></div>
+        <div class="nav-trace" id="nav-toggler" data-env="prod" data-url="http://localhost:4000"></div>
         <div id="nav-menu">
             
             
@@ -67,7 +71,7 @@ http://www.garethspictures.com/ -->
 
             
             
-                <a class="add-new circle menu-item" aria-disabled="true"></a>
+                <a class="fake-circle circle menu-item" aria-disabled="true"></a>
         </div>
 
     </div>
@@ -76,12 +80,8 @@ http://www.garethspictures.com/ -->
 </nav>
 
 <main>
-    <!---->
-    <!--<div class="breadcrumbs" id="breadcrumbs">-->
-        <!--<a class="circle all menu-item" href="#")"><span>All</span></a>-->
 
-    <!--</div>-->
-    <!---->
+    
     
 
 <div class="recipe-card category-desserts">
