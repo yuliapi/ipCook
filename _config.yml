@@ -46,3 +46,22 @@ exclude: ["vendor",
           "gulpfile.js",
           "node_modules",
           "package.json"]
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      title:
+      output: true
+      permalink:
+      src:
+      origin:
+      category: ""
+      tags: ""
+      ingredients:
+         - ingredient1: amount
+
+

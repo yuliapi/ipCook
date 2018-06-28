@@ -1,24 +1,24 @@
 ---
+title: pear in wine
 layout: post
-title:  pear in wine
-date:   2018-06-14 17:47:00
 output: true
-permalink: /pear-in-wine/
-
-src:  /assets/images/pear-in-wine.jpg
+permalink: "/pear-in-wine/"
+src: "/assets/images/pear-in-wine.jpg"
 origin: https://kinda-cook.livejournal.com/tag/%D0%B3%D1%80%D1%83%D1%88%D0%B0
-
 category: desserts
-tags: [gluten free, no baking]
-
-ingredients: 
-    - груша: 4 шт
-    - чернослив: 8 шт
-    - красное сухое вино: 500 мл
-    - сaхар: 100 гр
-    - ваниль(или экстракт): 1 стручок(ч.л.)
-    - корица: 2 палочки
+tags:
+- gluten free
+- no baking
+ingredients:
+- груша: 4 шт
+- чернослив: 8 шт
+- красное сухое вино: 500 мл
+- сaхар: 100 гр
+- ваниль(или экстракт): 1 стручок(ч.л.)
+- корица: 2 палочки
+date: '2018-06-14 17:47:00 +0000'
 ---
+
 1. Очистить груши от кожуры, (хвостик оставить), вырезать чашечки у основания плода
 2. Вино, сахар, ваниль, корицу довести до кипения
 3. Добавить чернослив, груши.

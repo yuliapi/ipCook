@@ -17,7 +17,8 @@ let run          = require('gulp-run');
 let runSequence  = require('run-sequence');
 let sass         = require('gulp-ruby-sass');
 let uglify       = require('gulp-uglify-es').default;
-let merge = require('merge-stream');
+let merge        = require('merge-stream');
+const shell      = require('gulp-shell')
 
 // Include paths file.
 let paths = require('./_assets/gulp_config/paths');
@@ -94,13 +95,16 @@ gulp.task('clean:images', function(callback) {
 
 
 // Runs jekyll build command.
-gulp.task('build:jekyll', function() {
-    var shellCommand = 'bundle exec jekyll build --config _config.yml';
+// gulp.task('build:jekyll', function() {
+//     //var shellCommand = 'bundle exec jekyll build --config _config.yml';
+//
+//     var shellCommand = 'pwd';
+//     return gulp.src('')
+//         .pipe(run(shellCommand))
+//         .on('error', gutil.log);
+// });
+// Runs jekyll build command using local config.
 
-    return gulp.src('')
-        .pipe(run(shellCommand))
-        .on('error', gutil.log);
-});
 
 // Deletes the entire _site directory.
 gulp.task('clean:jekyll', function(callback) {
@@ -119,7 +123,6 @@ gulp.task('clean', ['clean:jekyll',
 gulp.task('build', function(callback) {
     runSequence('clean',
         ['build:scripts', 'build:images', 'build:styles'],
-        'build:jekyll',
         callback);
 });
 
@@ -144,16 +147,14 @@ gulp.task('build:scripts:watch', ['build:scripts'], function(callback) {
 
 gulp.task('serve', ['build'], function() {
 
-    browserSync.init({
-        server: paths.siteDir,
-        ghostMode: false, // Toggle to mirror clicks, reloads etc. (performance)
-        logFileChanges: true,
-        logLevel: 'debug',
-        open: true        // Toggle to automatically open page when starting.
-    });
+    var shellCommand = 'bundle exec jekyll serve --config _config.yml,_config.local.yml';
 
+    gulp.src('')
+        .pipe(run(shellCommand))
+        .on('error', gutil.log);
+
+//
     // Watch site settings.
-    gulp.watch(['_config.yml'], ['build:jekyll:watch']);
 
     // Watch .scss files; changes are piped to browserSync.
     gulp.watch('_assets/styles/**/*.scss', ['build:styles']);
@@ -164,16 +165,28 @@ gulp.task('serve', ['build'], function() {
     // Watch image files; changes are piped to browserSync.
     gulp.watch('_assets/img/**/*', ['build:images']);
 
-    // Watch posts.
-    gulp.watch('_posts/**/*.+(md|markdown|MD)', ['build:jekyll:watch']);
-
-    // Watch html and markdown files.
-    gulp.watch(['**/*.+(html|md|markdown|MD)', '!_site/**/*.*'], ['build:jekyll:watch']);
-
-    // Watch data files.
-    gulp.watch('_data/**.*+(yml|yaml|csv|json)', ['build:jekyll:watch']);
 });
+gulp.task('serve:prod', ['build'], function() {
 
+    var shellCommand = 'bundle exec jekyll serve --config _config.yml,_config.prod.yml';
+
+    gulp.src('')
+        .pipe(run(shellCommand))
+        .on('error', gutil.log);
+
+//
+    // Watch site settings.
+
+    // Watch .scss files; changes are piped to browserSync.
+    gulp.watch('_assets/styles/**/*.scss', ['build:styles']);
+
+    // Watch .js files.
+    gulp.watch('_assets/js/**/*.js', ['build:scripts:watch']);
+
+    // Watch image files; changes are piped to browserSync.
+    gulp.watch('_assets/img/**/*', ['build:images']);
+
+});
 
 
 
