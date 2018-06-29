@@ -36,6 +36,7 @@ $main: $yellow;
 $appetizers: $pink;
 
 $font-base: 16px;
+$font-color-base: #333;
 
 
 html {
@@ -205,67 +206,6 @@ h1, h2, h3, th {
     left: 25px;
   }
 }
-/*Tag styling*/
-//.tag {
-//    float: left;
-//    margin: 7px 20px;
-//    position: relative;
-//    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-//    font-size: 14px;
-//    font-weight: $font-bold;
-//    text-decoration: none;
-//
-//    color: rgb(91, 38, 105);
-//
-//    padding: 5px;
-//    padding-left: 20px;
-//    border: 2px solid rgb(91, 38, 105);
-//    border-left: none;
-//    border-radius: 5%;
-//}
-//
-//.tag::before {
-//    content: '';
-//
-//    width: 21px;
-//    height: 21px;
-//
-//    position: absolute;
-//    left: -10px;
-//    top: 3px;
-
-//    transform: rotate(45deg);
-//    border-left: 2px solid rgb(91, 38, 105);
-//    border-bottom: 2px solid rgb(91, 38, 105);
-//    border-radius: 17%;
-//
-//}
-
-//.tag::after {
-//    content: '';
-//
-//    width: 8px;
-//    height: 8px;
-//
-//    background: #fff;
-
-//    border-radius: 50%;
-//
-//    border: 2px solid rgb(91, 38, 105);
-//    position: absolute;
-//    top: 9px;
-//    left: 0;
-//}
-//
-//.tag.active, .tag.active::before, .tag.active::after {
-//    background-color: rgb(91, 38, 105);
-//    color: #fff
-//}
-//
-//.tag.active::after {
-//    border-color: #fff
-//}
-
 /*thumnail gallry styling*/
 
 .thumbnail {
@@ -663,6 +603,9 @@ h1, h2, h3, th {
     margin: 10px 0;
     list-style-type: none;
     counter-increment: item;
+    span {
+      background-color: #2a7ae2;
+    }
   }
 }
 
@@ -693,4 +636,13 @@ ol > li:before {
 ol > li:nth-child(n+10)::before {
   padding-right: 1.8em;
 }
-
+footer {
+  background-color: $gray;
+  color: $color-base;
+  text-align: center;
+  padding: 10px;
+  p {
+    display: inline-block;
+    padding: 5px;
+  }
+}
