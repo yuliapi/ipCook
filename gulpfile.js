@@ -138,7 +138,7 @@ gulp.task('build:scripts:watch', ['build:scripts'], function (callback) {
 });
 
 //Autopublish to GitHub
-gulp.task('add', function(){
+gulp.task('add', ['build:prod'], function(){
     return gulp.src('./')
         .pipe(git.add({args: '-v'}));
 });
@@ -146,7 +146,7 @@ gulp.task('commit', ['add'], function(){
     return gulp.src('')
         .pipe(git.commit('Add/edit recipe or image', {args: '-v'}));
 });
-gulp.task('deploy', ['build:prod', 'commit'], function () {
+gulp.task('deploy', ['commit'], function () {
     git.push('origin', 'master', function (err) {
         if (err) throw err;
     });
