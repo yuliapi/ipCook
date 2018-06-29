@@ -1,5 +1,5 @@
 ---
-title: pear in wine :)))
+title: pear in wine
 layout: post
 output: true
 permalink: "/pear-in-wine/"
