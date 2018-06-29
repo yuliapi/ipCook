@@ -139,12 +139,12 @@ gulp.task('build:scripts:watch', ['build:scripts'], function (callback) {
 
 //Autopublish to GitHub
 gulp.task('add', function(){
-    return gulp.src('.')
-        .pipe(git.add());
+    return gulp.src('./')
+        .pipe(git.add({args: '-v'}));
 });
 gulp.task('commit', ['add'], function(){
-    return gulp.src('*')
-        .pipe(git.commit('Add/edit recipe or image'));
+    return gulp.src('')
+        .pipe(git.commit('Add/edit recipe or image', {args: '-v'}));
 });
 gulp.task('deploy', ['commit']);
 // Serves site and watches files.
