@@ -142,7 +142,8 @@ gulp.task('deploy', ['build:prod'], function () {
     return gulp.src("./_site/**/*")
         .pipe(deploy({
             remoteUrl: "git@github.com:yuliapi/ipCook.git",
-            branch: "master"
+            branch: "master",
+            message: 'Add/edit post/image'
         }))
 });
 
