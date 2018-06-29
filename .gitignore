@@ -1,8 +1,6 @@
 .sass-cache
 .jekyll-metadata
-node_modules
 node_modules/*
 .idea
 .publish
-_site_local
 _site_local/*
