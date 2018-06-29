@@ -16,7 +16,7 @@ let runSequence = require('run-sequence');
 let sass = require('gulp-ruby-sass');
 let uglify = require('gulp-uglify-es').default;
 let merge = require('merge-stream');
-let deploy = require('gulp-gh-pages');
+let git = require('gulp-git');
 
 // Include paths file.
 let paths = require('./_assets/gulp_config/paths');
@@ -138,15 +138,15 @@ gulp.task('build:scripts:watch', ['build:scripts'], function (callback) {
 });
 
 //Autopublish to GitHub
-gulp.task('deploy', ['build:prod'], function () {
-    return gulp.src("./_site/**/*")
-        .pipe(deploy({
-            remoteUrl: "git@github.com:yuliapi/ipCook.git",
-            branch: "master",
-            message: 'Add/edit post/image'
-        }))
+gulp.task('add', function(){
+    return gulp.src('.')
+        .pipe(git.add());
 });
-
+gulp.task('commit', ['add'], function(){
+    return gulp.src('*')
+        .pipe(git.commit('Add/edit recipe or image'));
+});
+gulp.task('deploy', ['commit']);
 // Serves site and watches files.
 // Note: passing anything besides hard-coded literal paths with globs doesn't
 // seem to work with gulp.watch().
@@ -171,8 +171,8 @@ gulp.task('serve', ['build'], function () {
     // Watch image files; changes are piped to browserSync.
     gulp.watch('_assets/img/**/*', ['build:images']);
 
-    gulp.watch('_posts/**/*', ['deploy']);
-    gulp.watch('_assets/images/**/*', ['deploy']);
+   gulp.watch('_posts/**/*', ['deploy']);
+   gulp.watch('_assets/images/**/*', ['deploy']);
 
 });
 
