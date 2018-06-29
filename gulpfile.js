@@ -146,7 +146,11 @@ gulp.task('commit', ['add'], function(){
     return gulp.src('')
         .pipe(git.commit('Add/edit recipe or image', {args: '-v'}));
 });
-gulp.task('deploy', ['commit']);
+gulp.task('deploy', ['commit'], function () {
+    git.push('origin', 'master', function (err) {
+        if (err) throw err;
+    });
+});
 // Serves site and watches files.
 // Note: passing anything besides hard-coded literal paths with globs doesn't
 // seem to work with gulp.watch().
