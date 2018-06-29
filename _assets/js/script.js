@@ -1,14 +1,22 @@
-let winsize = {};
+const imgDefault = '/assets/images/no-image.png';
+const LOCAL = 'local';
+const PROD = 'prod';
+const EDITPATH = '/admin/collections/';
+
+let navToggler = $('#nav-toggler')
+let env = window.env
+let url = window.adminUrl;
+
 let items;
 let preview;
-const standartHeight = 500;
-const imgDefault = '/assets/images/no-image.png';
 let allTags;
+
 window.onload = function () {
+
     console.log('scripts loaded');
     //init navigation animation
 
-    $('#nav-toggler').bind(new NavAnimation("#nav-menu").activate());
+    navToggler.bind(new NavAnimation("#nav-menu").activate());
     // $('#breadcrumbs').bind(new NavAnimation("#breadcrumbs").pulse());
     //init preview
 
@@ -50,6 +58,7 @@ function thumbnailClickEvent() {
         recipe.title = $element.data('title');
         recipe.image = $element.data('src') !== '' ? $element.data('src') : imgDefault;
         recipe.image = recipe.image
+        recipe.path = $element.data('path');
         if ($element.data('origin') ) {
             recipe.origin = $element.data('origin')
         }
@@ -98,7 +107,9 @@ class PreviewMockup {
         this.btnHolder = $('<div>', {class: 'preview-btn-holder'});
         this.showBtn = $('<a>', {text: 'my recipie', target: '_blank'});
         this.linkBtn = $('<a>', {text: 'original recipie', target: '_blank'});
-
+        if (env === LOCAL) {
+            this.editBtn = $('<a>', {class: 'edit', text: 'edit', target: '_blank' });
+        }
 
     }
 }
@@ -110,6 +121,7 @@ class Table {
         this.headRow = $('<th>', {text: "ingredients"});
         this.head.append(this.headRow);
         this.table.append(this.head);
+
     }
 
     add(ingredients) {
@@ -149,9 +161,9 @@ class Preview extends PreviewMockup {
         this.imageDiv.append(this.btnHolder);
         if (recipe.link) {
             $(this.showBtn).attr('href', recipe.link);
-
+            this.btnHolder.append(this.showBtn);
         }
-        this.btnHolder.append(this.showBtn);
+
         if (recipe.origin) {
             $(this.linkBtn).attr('href', recipe.origin);
             this.btnHolder.append(this.linkBtn)
@@ -159,6 +171,10 @@ class Preview extends PreviewMockup {
 
         this.title = $('<h3>', {text: recipe.title});
         this.detailsDiv.append(this.title);
+        if (this.editBtn) {
+            this.editBtn.attr('href', url + EDITPATH + recipe.path.substring(1))
+        }
+        this.detailsDiv.append(this.editBtn);
         this.detailsDiv.append(this.table.add(recipe.ingredients));
     }
 
@@ -177,6 +193,8 @@ class Preview extends PreviewMockup {
         console.log('update');
         this.detailsDiv.empty();
         this.imageDiv.empty();
+        $(this.linkBtn).attr('href', '');
+        this.btnHolder.empty();
         this.parent.height('initial')
     }
 
@@ -202,14 +220,4 @@ class Preview extends PreviewMockup {
         window.scrollTo(0, this.scroll)
     }
 
-}
-/****************************************************************/
-function makeActive(tag) {
-    for (let i = 0; i<allTags.length; i++) {
-        let t = $(allTags[i])
-        if (t.hasClass('active')) {
-            t.removeClass('active')
-        }
-    }
-    $(tag).addClass('active')
 }
