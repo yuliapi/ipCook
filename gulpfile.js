@@ -146,7 +146,7 @@ gulp.task('commit', ['add'], function(){
     return gulp.src('')
         .pipe(git.commit('Add/edit recipe or image', {args: '-v'}));
 });
-gulp.task('deploy', ['commit'], function () {
+gulp.task('deploy', ['build:prod', 'commit'], function () {
     git.push('origin', 'master', function (err) {
         if (err) throw err;
     });
