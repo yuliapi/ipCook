@@ -73,6 +73,12 @@ gulp.task('build:images', function () {
                     height: 200,
                     crop: 'center',
                 },
+                '*.jpeg': {
+                    // Resize all JPEG images to 200 pixels wide
+                    width: 200,
+                    height: 200,
+                    crop: 'center',
+                },
                 '*.png': {
                     width: '100%',
                     height: '100%'
