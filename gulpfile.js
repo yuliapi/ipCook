@@ -138,11 +138,11 @@ gulp.task('build:scripts:watch', ['build:scripts'], function (callback) {
 });
 
 //Autopublish to GitHub
-gulp.task('add', ['build:prod'], function(){
+gulp.task('add', ['build:prod'], function () {
     return gulp.src('./')
         .pipe(git.add({args: '-v'}));
 });
-gulp.task('commit', ['add'], function(){
+gulp.task('commit', ['add'], function () {
     return gulp.src('')
         .pipe(git.commit('Add/edit recipe or image', {args: '-v'}));
 });
@@ -173,10 +173,10 @@ gulp.task('serve', ['build'], function () {
     gulp.watch('_assets/js/**/*.js', ['build:scripts:watch']);
 
     // Watch image files; changes are piped to browserSync.
-    gulp.watch('_assets/img/**/*', ['build:images']);
+    gulp.watch('_assets/images/**/*', ['build:images']);
 
-   gulp.watch('_posts/**/*', ['deploy']);
-   gulp.watch('_assets/images/**/*', ['deploy']);
+    gulp.watch('_posts/**/*', ['deploy']);
+    gulp.watch('_assets/images/**/*', ['deploy']);
 
 });
 
