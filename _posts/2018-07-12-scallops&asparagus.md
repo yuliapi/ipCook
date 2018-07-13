@@ -8,18 +8,18 @@ origin: null
 category: appetizers
 ingredients:
 - scallops (large): 1.5 lbs
-  olive oil: 6 tbsp
-  red chili flakes: 1/4 tsp
-  garlic (finely chopped): 2 cloves
-  lime juice: 1/4 cup
-  dry white wine: 1/4 cup
-  fresh ginger (minced): 1 tbsp
-  shallot (large, chopped): 1 pcs
-  heavy cream: 1/3 cup
-  sweet chili sauce: 2 tbsp
-  unsalted butter: 6 tbsp
-  asparagus: 1.5 lbs
-  parsley (for garnish):
+-  olive oil: 6 tbsp
+-  red chili flakes: 1/4 tsp
+-  garlic (finely chopped): 2 cloves
+-  lime juice: 1/4 cup
+-  dry white wine: 1/4 cup
+-  fresh ginger (minced): 1 tbsp
+-  shallot (large, chopped): 1 pcs
+-  heavy cream: 1/3 cup
+-  sweet chili sauce: 2 tbsp
+ - unsalted butter: 6 tbsp
+ - asparagus: 1.5 lbs
+ - parsley (for garnish):
 ---
 
 1. Preheat grill to medium-high
