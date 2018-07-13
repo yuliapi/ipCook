@@ -59,12 +59,11 @@ function thumbnailClickEvent() {
         recipe.image = $element.data('src') !== '' ? $element.data('src') : imgDefault;
         recipe.image = recipe.image
         recipe.path = $element.data('path');
-        if ($element.data('origin') ) {
+        if ($element.data('origin')) {
             recipe.origin = $element.data('origin')
         }
-        if ($element.data('link') ) {
+        if ($element.data('link')) {
             recipe.link = $element.data('link');
-            console.log(recipe)
         }
         let sameRow = isSameRow($element);
 
@@ -86,7 +85,9 @@ function thumbnailClickEvent() {
             preview.update()
         }
         preview.content(recipe);
-        preview.adjustHeight()
+
+        preview.adjustHeight();
+        // preview.scrollUpdate()
     }
 }
 
@@ -108,7 +109,7 @@ class PreviewMockup {
         this.showBtn = $('<a>', {text: 'my recipie', target: '_blank'});
         this.linkBtn = $('<a>', {text: 'original recipie', target: '_blank'});
         if (env === LOCAL) {
-            this.editBtn = $('<a>', {class: 'edit', text: 'edit', target: '_blank' });
+            this.editBtn = $('<a>', {class: 'edit', text: 'edit', target: '_blank'});
         }
 
     }
@@ -210,14 +211,13 @@ class Preview extends PreviewMockup {
     }
 
     adjustHeight() {
-        console.log(this.parent);
         let height = $(this.node).outerHeight();
         this.parent.height($(this.parent).outerHeight() + height)
     }
 
     scrollUpdate() {
         console.log('scrolling....');
-        window.scrollTo(0, this.scroll)
+
     }
 
 }
