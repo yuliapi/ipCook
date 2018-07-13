@@ -199,7 +199,7 @@ gulp.task('serve:prod', ['build'], function () {
     gulp.watch('_assets/js/**/*.js', ['build:scripts:watch']);
 
     // Watch image files; changes are piped to browserSync.
-    gulp.watch('_assets/img/**/*', ['build:images']);
+    gulp.watch('_assets/images/**/*', ['build:images']);
 
 });
 
