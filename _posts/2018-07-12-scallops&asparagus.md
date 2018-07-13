@@ -19,7 +19,7 @@ ingredients:
   sweet chili sauce: 2 tbsp
   unsalted butter: 6 tbsp
   asparagus: 1.5 lbs
-  parsley (for garnish): ''
+  parsley (for garnish):
 ---
 
 1. Preheat grill to medium-high
