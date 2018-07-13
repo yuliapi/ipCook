@@ -1,6 +1,6 @@
 ---
+title: Scallops and asparagus with chili-lime cream sauce
 layout: post
-title: Scallops and Asparagus with chili-lime cream sause
 output: true
 permalink: "/scallops-with-asparagus/"
 src: "/assets/images/scallops-and-asparagus.jpg"
