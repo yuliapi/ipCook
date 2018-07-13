@@ -17,9 +17,9 @@ ingredients:
 -  shallot (large, chopped): 1 pcs
 -  heavy cream: 1/3 cup
 -  sweet chili sauce: 2 tbsp
- - unsalted butter: 6 tbsp
- - asparagus: 1.5 lbs
- - parsley (for garnish):
+- unsalted butter: 6 tbsp
+- asparagus: 1.5 lbs
+- parsley (for garnish):
 ---
 
 1. Preheat grill to medium-high
