@@ -55,7 +55,7 @@ defaults:
       title: YYYY-MM-DD-recipe-title.md
       output: true
       permalink: /recipe-title/
-      src: /assets/images/file-name.ext
+      src:
       origin:
       category: ""
       tags: ""

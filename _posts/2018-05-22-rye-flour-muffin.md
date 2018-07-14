@@ -1,28 +1,28 @@
 ---
+title: rye flour muffin
 layout: post
-title:  rye flour muffin
-date:   2018-05-22 11:10:00
 output: true
-permalink: /rye-flour-muffin/
-
-src: /assets/images/rye-muffin.jpg 
+permalink: "/rye-flour-muffin/"
+src: "/assets/images/rye-muffin.jpg"
 origin: https://www.lenafilatova.com/2015/04/pashalnyiy-kulich-na-rzhanoy-muce/
-
 category: desserts
-tags: [sugar free, rye flour]
+tags:
+- sugar free
+- rye flour
+ingredients:
+- dried fruits: 1 cup
+- rye flour: 2 cups
+- flax meal: 1 tbsp
+- cooking vine(or water): 1+1/4  cup
+- olive oil: 3 tbsp
+- lemon juice: 2 tbsp
+- baking soda: 1 tsp
+- ground ginger: 2 tbsp
+- anise seeds: 1 tsp
+- salt: 1 pinch
+date: '2018-05-22 11:10:00 +0000'
+---
 
-ingredients: 
-    - dried fruits: 1 cup
-    - rye flour: 2 cups
-    - flax meal: 1 tbsp
-    - cooking vine(or water): 1 cup
-    - olive oil: 3 tbsp
-    - lemon juice: 2 tbsp
-    - baking soda: 1 tsp
-    - ground ginger: 2 tbsp
-    - anise seeds: 1 tsp
-    - salt: 1 pinch
----    
 steps:
 1. Нагрейть духовку до 330F
 2. В глубокую миску просеять муку (если в сите что-то останется, вернуть это в муку)
@@ -35,6 +35,3 @@ steps:
 9. Сразу же распределить по формам и отправить в печь
 10. Выпекать около 40 минут. Последние 10 минут можно прикрывать фольгой, чтобы верхушка не подгорела
 11. Слегка остудить, достать из форм и оставить остывать.
- 
-
-
