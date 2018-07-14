@@ -13,7 +13,7 @@ ingredients:
 - dried fruits: 1 cup
 - rye flour: 2 cups
 - flax meal: 1 tbsp
-- cooking vine(or water): 1+1/4  cup
+- cooking vine(or water): 1+1/4 cup
 - olive oil: 3 tbsp
 - lemon juice: 2 tbsp
 - baking soda: 1 tsp
