@@ -22,7 +22,7 @@ ingredients:
 - parsley (for garnish):
 ---
 
-**Note: Costco book page 89**
+* **Note: Costco book page 89** *
 1. Preheat grill to medium-high
 2. In a large bowl combine scallops, 4 tbsp olive oil, chili flakes and garlic. Add pinch of salt and pepper. Stir well. Marinate 30 minutes.
 3. In small saucepan combine lime juice, wine, ginger and shallot. Cook over high heat untill reduced by half, about 3 minutes. Add cream and again reduce liquid by half, about 5 minutes. Remive from heat. Stir in chili sauce. Cut butter in 6 chunks, whisk it 1 piece at time. Set aside.
