@@ -128,17 +128,17 @@ class Table {
     add(ingredients) {
         ingredients.forEach((e) => {
             const product = Object.keys(e);
-            let amount = "",
-                measure = "";
+            let amount = ""
+                // measure = "";
             if (Object.values(e)[0] != null) {
-                amount = Object.values(e)[0].split(" ")[0];
-                measure = Object.values(e)[0].split(" ")[1];
+                amount = Object.values(e)[0];
+                // measure = Object.values(e)[0].split(" ")[1];
             }
 
             const row = $('<tr>').append($('<td>', {
                 class: 'ingredient',
                 text: product
-            })).append($('<td>', {class: 'amount', text: amount + measure}));
+            })).append($('<td>', {class: 'amount', text: amount}));
             this.table.append(row);
         });
         return (this.table)
