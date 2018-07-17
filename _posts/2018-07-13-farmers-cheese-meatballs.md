@@ -1,6 +1,6 @@
 ---
-layout: post
 title: farmers cheese meatballs with zucchini sauce
+layout: post
 output: true
 permalink: "/farmers-cheese-meatballs/"
 src: null
@@ -13,7 +13,7 @@ ingredients:
 - Milk (warm): 250-300 ml
 - Onion: 1 pcs
 - Potato starch: 1 tbsp
-- salt, peper, olive oil
+- salt, peper, olive oil: ''
 ---
 
 Смешать  фарш и творог, посолить и поперчить по вкусу. Хорошо вымешать. Скатать небольшие шарики
