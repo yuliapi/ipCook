@@ -194,7 +194,7 @@ class Preview extends PreviewMockup {
         console.log('update');
         this.detailsDiv.empty();
         this.imageDiv.empty();
-        $(this.linkBtn).attr('href', '');
+        // this.linkBtn.attr('href', '');
         this.btnHolder.empty();
         this.parent.height('initial')
     }
@@ -202,6 +202,7 @@ class Preview extends PreviewMockup {
     close() {
         this.detailsDiv.empty();
         this.imageDiv.empty();
+        this.btnHolder.empty();
         this.node.remove();
         this.current.removeClass('expanded');
         this.parent.removeClass('parent');
