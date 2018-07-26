@@ -1,7 +1,7 @@
 {
   "name": "ipcook",
   "version": "1.0.0",
-  "description": "cookin book",
+  "description": "cooking book",
   "main": "index.js",
   "dependencies": {
     "gulp-responsive": "^2.10.0",

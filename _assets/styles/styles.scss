@@ -296,6 +296,7 @@ h1, h2, h3, th {
   height: 100%;
   display: grid;
   grid-template-areas: 'details' 'image';
+
   @include media-query(small) {
     grid-template-areas: 'image details';
     margin-right: 0;
@@ -344,7 +345,10 @@ h1, h2, h3, th {
   flex-direction: column;
   align-items: flex-end;
   border: none;
-  margin-right: 20px;
+  width: 220px;
+  @include media-query(small) {
+    width: 100%;
+  }
 }
 
 .preview-details {
@@ -390,6 +394,7 @@ h1, h2, h3, th {
 .ingredient-table {
   border-spacing: 0;
   td {
+    text-transform: lowercase;
     padding: 5px 0;
     font-size: 1.125em;
   }
@@ -400,6 +405,7 @@ h1, h2, h3, th {
     font-weight: $font-normal;
     text-align: start;
     .ingredient {
+
       width: 70%;
     }
     .amount {
