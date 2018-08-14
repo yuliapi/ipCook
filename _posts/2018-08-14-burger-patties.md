@@ -1,6 +1,6 @@
 ---
+title: Burger patties
 layout: post
-title: YYYY-MM-DD-recipe-title.md
 output: true
 permalink: "/burger-patties/"
 src: null
