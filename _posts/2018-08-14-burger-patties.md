@@ -7,7 +7,7 @@ src: null
 origin: https://www.allrecipes.com/recipe/49404/juiciest-hamburgers-ever/
 category: main
 ingredients:
-- ground beef: 1 lbs
+- ground beef: 2 lbs
 - egg: 1 pcs
 - dry bread crumbs: 3/4 cup
 - evaporated milk: 3 tbsp
