@@ -1,6 +1,6 @@
 ---
-layout: post
 title: milk and chokolate jelly
+layout: post
 output: true
 permalink: "/milk&choko-jelly/"
 src: "/assets/images/milk&choco-jelly.jpg"
@@ -13,7 +13,7 @@ ingredients:
 - dark(milk) chocolate: 50 g
 ---
 
-1. Soak gelatinte in some amount of milk(apx. 10 min)
+1. Soak gelatinte in some amount of milk(apx. 10 min).
 2. Melt sugar (chocolate) in rest of the milk.
 3. Add geletine, heat until fully dissolve, dont boil
 4. Pour the mixture into. Chill  in the fridge till firm.
