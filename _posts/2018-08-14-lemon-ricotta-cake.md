@@ -1,9 +1,9 @@
 ---
-layout: post
 title: lemon ricotta cake
+layout: post
 output: true
 permalink: "/lemon-ricotta-cake/"
-src: null
+src: "/assets/images/lemon-ricotta-cake.jpg"
 origin: https://cookingwithoutgluten.wordpress.com/2015/04/16/lemon-ricotta-cake-3-gluten-free-recipes/
 category: desserts
 ingredients:
