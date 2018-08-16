@@ -1,5 +1,5 @@
 ---
-title: milk and chokolate jelly
+title: milk and chocolate jelly
 layout: post
 output: true
 permalink: "/milk&choko-jelly/"
