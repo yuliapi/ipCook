@@ -3,7 +3,7 @@ title: Burger patties
 layout: post
 output: true
 permalink: "/burger-patties/"
-src: null
+src: "/assets/images/hamburger.jpg"
 origin: https://www.allrecipes.com/recipe/49404/juiciest-hamburgers-ever/
 category: main
 ingredients:
