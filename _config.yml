@@ -60,6 +60,6 @@ defaults:
       category: ""
       tags: ""
       ingredients:
-         - ingredient1: amount
+         - ingredient: amount
 
 
